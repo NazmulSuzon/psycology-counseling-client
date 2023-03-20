@@ -1,0 +1,18 @@
+.banner{
+    background-color: rgb(90,92,130);
+    /* width: 1800px; */
+    /* max-height: 500px; */
+}
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+  }
+  .img2-text{
+    position: absolute;
+    text-align: right;
+    bottom: 8px;
+    right: -160px;
+    transform: translate(-50%, -50%);
+  }

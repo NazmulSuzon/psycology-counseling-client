@@ -80,8 +80,8 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar bg-base-100">
-      <div className="navbar-start">
+    <div className="navbar px-32 bg-[#5A5C82]">
+      <div className=" navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
             <svg
@@ -101,18 +101,22 @@ const Navbar = () => {
           </label>
           <ul
             tabIndex={0}
-            className="p-2 mt-3 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52"
+            className="p-2 mt-3 text-black bg-white shadow menu menu-compact dropdown-content rounded-box w-52"
           >
             {menuItems}
           </ul>
         </div>
-        <Link to="/"><img src={logo} alt="" /></Link>
+        <Link to="/">
+          <img src={logo} alt="" />
+        </Link>
       </div>
-      <div className="hidden navbar-center lg:flex">
+      <div className="hidden text-white navbar-center lg:flex ">
         <ul className="px-1 menu menu-horizontal">{menuItems}</ul>
       </div>
       <div className="navbar-end">
-        <Link to="/appointment" className="btn">Appointment</Link>
+        <Link to="/appointment" className="text-white bg-[#5A5C82] border-white btn px-6">
+          Appointment!
+        </Link>
       </div>
     </div>
   );
