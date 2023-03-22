@@ -46,7 +46,7 @@ const Banner = () => {
         </p>
             <h1 className="text-6xl font-bold text-[#4B4D75]">We Provide</h1><br />
             <h1 className="text-6xl font-bold text-[#4B4D75]"><span className="text-[#B07AB4]">Psychology Programs</span></h1>
-            <p className="text-xl pt-8 font-bold text-[#4B4D75]">Clinical Psychologist <span> • Unlimited Revisions</span> <span> • 24/7 support</span></p><br />
+            <p className="text-xl pt-8 font-bold text-[#4B4D75]">Clinical Psychologist <span> <span className="text-[#B07AB4]">🟌</span> Unlimited Revisions</span> <span> <span className="text-[#B07AB4]">🟌</span> 24/7 support</span></p><br />
             <Link to="/about" className="px-8 text-black bg-white btn hover:text-white hover:bg-[#5A5C82]">
           About Us!
         </Link>
