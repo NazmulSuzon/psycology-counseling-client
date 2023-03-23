@@ -34,7 +34,7 @@ const ServiceCard = () => {
   ];
 
   return (
-    <div className="grid grid-cols-1 gap-6 mt-40 md:grid-cols-2 lg:grid-cols-4">
+    <div className="grid grid-cols-1 gap-6 mt-40 drop-shadow-md md:grid-cols-2 lg:grid-cols-4">
       {servviceCardData.map((card) => (
         <div
           key={card.id}
@@ -45,8 +45,8 @@ const ServiceCard = () => {
             <img style={{ width: "55px" }} src={card.icon} alt="Album" />
           </figure>
           <div className="card-body">
-            <h2 className="card-title">New album is released!</h2>
-            <p>Click the button to listen on Spotiwhy app.</p>
+            <h2 className="card-title"><span className="text-[#B07AB4]">{card.id}</span> {card.title}</h2>
+            <p>{card.details}</p>
             <div className="justify-end card-actions wrapper">
               <div className="px-5">
                 <ul>

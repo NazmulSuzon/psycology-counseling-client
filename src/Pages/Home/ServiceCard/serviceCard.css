@@ -2,14 +2,12 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-  
-  html,
-  body {
-    background: #ffffff;
-    height: 100%;
-    font-family: "Helvetica Neue LT W01_41488878";
-    font-size: 16px;
-    line-height: 26px;
+
+  .card-title{
+    color: black;
+  }
+  .card-title:hover{
+    color: #B07AB4;
   }
   
   .container {
