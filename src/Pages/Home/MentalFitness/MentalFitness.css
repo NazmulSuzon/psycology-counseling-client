@@ -1,0 +1,7 @@
+.card-img{
+    background-image: url(../../../images/quote_1.svg);
+    background-repeat: no-repeat;
+    font-size: 23px;
+    border-left: 3px solid #B07AB4;
+    border-radius: 5px;
+}
