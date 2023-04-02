@@ -4,7 +4,8 @@ import "./MentalFitness.css";
 
 const MentalFitness = () => {
   return (
-    <div className="grid gap-8 mx-24 mt-20 lg:grid-cols-2 sm:grid-cols-1">
+    <div>
+      <div className="grid gap-8 mx-24 mt-20 lg:grid-cols-2 sm:grid-cols-1">
       <div className="layer-content">
         <img style={{minHeight:'100%'}} src={img1} alt="" />
       </div>
@@ -47,6 +48,7 @@ const MentalFitness = () => {
         </div>
 
       </div>
+    </div>
     </div>
   );
 };
