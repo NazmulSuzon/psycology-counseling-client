@@ -8,7 +8,7 @@ import './CounselorAppointment.css';
 
 const CounselorAppointment = () => {
   return (
-    <div className="grid ml-64 bg-neutral lg:grid-cols-2 md:grid-cols-1">
+    <div className="grid my-20 ml-64 bg-neutral lg:grid-cols-2 md:grid-cols-1">
       <div className="py-16 -ml-64">
         <img style={{ width: "936px", height: "668px" }} src={img1} alt="" />
       </div>
