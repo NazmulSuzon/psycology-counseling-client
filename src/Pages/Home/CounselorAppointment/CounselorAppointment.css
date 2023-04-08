@@ -1,0 +1,7 @@
+.decrease{
+    width: 100%;
+    background: -webkit-linear-gradient(left, white 30%, #5A5C82 70%);
+   background: -moz-linear-gradient(left, white 30%, #5A5C82 70%);
+   background: -ms-linear-gradient(lleft, white 30%, #5A5C82 70%);
+   background: linear-gradient(left, white 30%, #5A5C82 70%);
+}

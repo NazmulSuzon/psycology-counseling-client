@@ -30,7 +30,7 @@ const Treatments = () => {
             Smile Pure always places patients at the center of our attention,
             and <br />
             concentrate on imprd of technologies skill.{" "}
-            <Link>Check all services</Link>
+            <Link className="underline">Check all services</Link>
           </p>
         </div>
       </div>
@@ -48,7 +48,7 @@ const Treatments = () => {
           modules={[Autoplay]}
         >
           <SwiperSlide className="mx-2 drop-shadow-md carousel-card">
-            <div>
+            <div className="bg-img">
               <img style={{ width: "55px" }} src={img1} alt="" />
               <h1 className="mt-4">Personality Disorders</h1>
               <p className="mt-4 font-bold text-accent">A personality disorder involves a lasting pattern of emotional unstable behavior that causes problems.</p>

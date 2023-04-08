@@ -49,6 +49,20 @@
 .carousel-card{
   transition: .3s;
 }
+/* .bg-img{
+  position: relative;
+  &::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 9;
+    background-image: url('../../../images/carousel-card/disorders.png');
+    background-position: bottom right;
+    opacity: 0.2;
+  }
+} */
 
 /* 
 .arrow-sign:hover{

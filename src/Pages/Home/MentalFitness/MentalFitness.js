@@ -41,7 +41,7 @@ const MentalFitness = () => {
           meditation cushion, yoga mat, and reiky
         </p>
 
-        <div style={{width:'75%'}} className="mt-4 shadow-xl card bg-base-100 image-full card-img">
+        <div style={{width:'75%'}} className="mt-4 bg-light card card-img">
           <div className="card-body">
             <h3 className="font-bold text-secondary">The Best Online Counseling & Therapy <br /> Website. <span className="text-primary">Feel Free</span> to Talk.</h3>
           </div>

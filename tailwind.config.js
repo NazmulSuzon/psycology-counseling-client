@@ -9,7 +9,8 @@ module.exports = {
         zenistatheme:{
           primary: '#B07AB4',
           secondary: '#4B4D75',
-          accent: '#8889ac'
+          accent: '#8889ac',
+          neutral:'#5A5C82'
         }
       }
     ]

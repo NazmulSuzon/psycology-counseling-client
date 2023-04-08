@@ -24,7 +24,7 @@ const Navbar = () => {
             <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
           </svg>
         </Link>
-        <ul className="p-2">
+        <ul >
           <li>
             <Link to="/">Personality Disorders</Link>
           </li>
@@ -58,7 +58,7 @@ const Navbar = () => {
             <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
           </svg>
         </Link>
-        <ul className="p-2">
+        <ul>
           <li>
             <Link to="/">Research Style</Link>
           </li>
@@ -80,7 +80,8 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar px-32 bg-[#5A5C82]">
+    <div className="px-12">
+      <div className="px-16 navbar bg-neutral">
       <div className=" navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -118,6 +119,7 @@ const Navbar = () => {
           Appointment!
         </Link>
       </div>
+    </div>
     </div>
   );
 };

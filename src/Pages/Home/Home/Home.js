@@ -3,6 +3,7 @@ import Banner from '../Banner/Banner';
 import ServiceCard from '../ServiceCard/ServiceCard';
 import MentalFitness from '../MentalFitness/MentalFitness';
 import Treatments from '../Treatments/Treatments';
+import CounselorAppointment from '../CounselorAppointment/CounselorAppointment';
 
 const Home = () => {
     return (
@@ -11,6 +12,7 @@ const Home = () => {
             <ServiceCard/>
             <MentalFitness/>
             <Treatments/>
+            <CounselorAppointment/>
         </div>
     );
 };
