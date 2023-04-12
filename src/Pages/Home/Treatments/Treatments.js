@@ -16,7 +16,7 @@ import img6 from "../../../images/carousel-card/love.png";
 const Treatments = () => {
   return (
     <div>
-      <div className="container grid grid-cols-2 gap-12 mx-auto mt-16">
+      <div className="container grid grid-cols-2 gap-12 mt-16">
         <div className="text-center">
           <p className="font-bold text-accent ">
             TYPES OF TREATMENTS AT ZENISTA
