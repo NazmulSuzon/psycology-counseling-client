@@ -7,7 +7,7 @@ import img3 from "../../../images/New folder/03.png";
 
 const Review = () => {
   return (
-    <div className="py-8 text-center background">
+    <div className="py-20 text-center background">
       <p className="font-semibold text-accent">STEPS TOWARDS MENTAL FITNESS</p>
       <h2 style={{ fontSize: "39px" }} className="font-bold text-secondary">
         Resources & recovered <span className="text-primary">Patients</span>{" "}
@@ -16,7 +16,7 @@ const Review = () => {
       <div className="container mx-auto">
         <Carousel cols={3} rows={1} gap={20} loop autoplay={1500}>
           <Carousel.Item>
-            <div className="drop-shadow-2xl card card-compact bg-base-100">
+            <div className="card card-compact bg-base-100">
               <div className="flex pt-8 pl-8 mb-4">
                 <img
                   style={{ width: "73px", borderRadius: "50%" }}

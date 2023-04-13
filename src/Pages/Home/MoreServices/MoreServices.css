@@ -1,0 +1,22 @@
+.service-banner{
+    background-image: url('../../../images/row-bgimage-02.jpg');
+    position: relative;
+    background-size: cover;
+    /* overflow:visible; */
+}
+
+/* .service-banner::after{
+    content: "";
+    display: block;
+    width: 100%;
+    background-color: rgba(183, 135, 187, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .7;
+} */
+
+.image-overlay{
+    background-color: rgba(183, 135, 187, 1);
+    opacity: .9;
+}
