@@ -1,4 +1,4 @@
-.loginBG{
+.signupBG{
     background-image: url('../../../images/loginImage.png');
     background-position: center;
     background-repeat: no-repeat;
@@ -9,9 +9,4 @@
     margin-top: 30px;
     width: 50%;
     height: 80vh;
-}
-.login-form{
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
