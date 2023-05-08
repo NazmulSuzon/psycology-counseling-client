@@ -20,7 +20,7 @@ const Login = () => {
               <span className="text-2xl text-black label-text">Email</span>
             </label>
             <input
-              type="text"
+              type="email"
               {...register("email", {required: "Email Address is required"})}
               className="w-full max-w-xs input input-bordered"
               placeholder="Enter Your Email"
@@ -35,7 +35,8 @@ const Login = () => {
               type="password"
               {...register("password", {
                 required: "Password is required",
-                minLength: {value:6, message:'Password must be 6 characters or longer'}
+                minLength: {value:6, message:'Password must be 6 characters or longer'},
+                pattern: {value: /(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])/, message: 'Password must be strong'}
               })}
               className="w-full max-w-xs input input-bordered"
               placeholder="Enter Your Password"

@@ -1,49 +1,41 @@
 import React from 'react';
-import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import './SignUp.css';
 
 const SignUp = () => {
-    const { register, handleSubmit } = useForm();
-  const [data, setData] = useState("");
+    const { register, formState: { errors }, handleSubmit } = useForm();
+    const handleSignUp = (data) =>{
+      console.log(data);
+    }
     return (
         <div className="h-[800px] flex justify-center items-center signupBG">
       <div className="p-8 shadow-2xl card glass w-96">
         <h2 className="text-4xl font-bold text-primary">Please Sign Up</h2>
-        <form onSubmit={handleSubmit((data) => setData(JSON.stringify(data)))}>
+        <form onSubmit={handleSubmit(handleSignUp)}>
           <div className="w-full max-w-xs form-control">
             <label className="label">
-              <span className="text-2xl text-black label-text">First Name</span>
+              <span className="text-2xl text-black label-text">Name</span>
             </label>
             <input
               type="text"
-              {...register("firstName")}
+              {...register("name", {required: "Name is required"})}
               className="w-full max-w-xs input input-bordered"
-              placeholder="Enter Your First Name"
+              placeholder="Enter Your Name"
             />
-          </div>
-          <div className="w-full max-w-xs form-control">
-            <label className="label">
-              <span className="text-2xl text-black label-text">Last Name</span>
-            </label>
-            <input
-              type="text"
-              {...register("lastName")}
-              className="w-full max-w-xs input input-bordered"
-              placeholder="Enter Your Last Name"
-            />
+            {errors.name && <p role="alert" className="text-error">{errors.name?.message}</p>}
           </div>
           <div className="w-full max-w-xs form-control">
             <label className="label">
               <span className="text-2xl text-black label-text">Email</span>
             </label>
             <input
-              type="text"
-              {...register("email")}
+              type="email"
+              {...register("email", {required: "Email is required"})}
               className="w-full max-w-xs input input-bordered"
               placeholder="Enter Your Email"
             />
+            {errors.email && <p role="alert" className="text-error">{errors.email?.message}</p>}
           </div>
           <div className="w-full max-w-xs form-control">
             <label className="label">
@@ -51,23 +43,16 @@ const SignUp = () => {
             </label>
             <input
               type="password"
-              {...register("password")}
+              {...register("password",{
+                required: "Password is required",
+                minLength: {value:6, message:'Password must be 6 characters or longer'},
+                pattern: {value: /(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])/, message: 'Password must be strong'}
+              })}
               className="w-full max-w-xs input input-bordered"
               placeholder="Enter Your Password"
             />
+            {errors.password && <p role="alert" className="text-error">{errors.password?.message}</p>}
           </div>
-          <div className="w-full max-w-xs form-control">
-            <label className="label">
-              <span className="text-2xl text-black label-text">Confirm Password</span>
-            </label>
-            <input
-              type="password2"
-              {...register("password")}
-              className="w-full max-w-xs input input-bordered"
-              placeholder="Enter Your Confirm Password"
-            />
-          </div>
-          <p>{data}</p>
           <button className="px-8 mt-3 text-white border-0 btn bg-primary">Sign Up</button>
           <p className="mt-3 text-xl text-black">Already have an account? <Link to="/login" className="font-bold text-secondary"><u>Login</u></Link> </p>
         </form>
