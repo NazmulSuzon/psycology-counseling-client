@@ -6,7 +6,7 @@ import './Footer.css';
 
 const Footer = () => {
   return (
-    <div className="mt-20 bg-neutral footer-img">
+    <div className="mt-20 border-primary bg-neutral footer-img">
       <div className="container pt-20 mx-auto">
         <div>
           <div className="flex items-center mb-8">

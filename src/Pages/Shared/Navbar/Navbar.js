@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 import logo from "../../../images/logo.png";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../../contexts/AuthProvider";
 
 const Navbar = () => {
+  const {user, logOut} = useContext(AuthContext);
+
+  const handleLogOut = () =>{
+    logOut()
+    .then(() =>{})
+    .catch(err => console.log(err));
+  }
+
   const menuItems = (
     <React.Fragment>
       <li>
@@ -45,37 +54,25 @@ const Navbar = () => {
           </li>
         </ul> */}
       </li>
-      <li tabIndex={0}>
-        <Link to="/">
-          Research
-          {/* <svg
-            className="fill-current"
-            xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-          >
-            <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
-          </svg> */}
-        </Link>
-        {/* <ul>
-          <li>
-            <Link to="/">Research Style</Link>
-          </li>
-          <li>
-            <Link to="/">Research Details</Link>
-          </li>
-        </ul> */}
-      </li>
       <li>
         <Link to="/blog">Blog</Link>
       </li>
       <li>
         <Link to="/contact">Contact</Link>
       </li>
+      { user?.uid ? 
+      <>
+        <li>
+        <Link to="/dashboard">Dashboard</Link>
+      </li>
+        <li>
+          <button onClick={handleLogOut}>Sign Out</button>
+        </li>
+      </>
+      :
       <li>
         <Link to="/login">Log In</Link>
-      </li>
+      </li>}
     </React.Fragment>
   );
 

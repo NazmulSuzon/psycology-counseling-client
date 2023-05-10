@@ -1,13 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Login.css";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../../../contexts/AuthProvider";
 
 const Login = () => {
   const { register, formState: { errors }, handleSubmit } = useForm();
+  const {signIn} = useContext(AuthContext);
+  const [loginError, setLoginError] = useState('');
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const from = location.state?.from?.pathname || '/';
 
   const handleLogin = data =>{
     console.log(data);
+    setLoginError('');
+    signIn(data.email, data.password)
+      .then(result =>{
+        const user = result.user;
+        console.log(user);
+        navigate(from, {replace: true});
+      })
+      .catch(error => {
+        console.log(error.message)
+        setLoginError(error.message)
+      });
   }
 
   return (
@@ -42,6 +61,9 @@ const Login = () => {
               placeholder="Enter Your Password"
             />
             {errors.password && <p role="alert" className="text-error">{errors.password?.message}</p>}
+            <div>
+            {loginError && <p className="font-bold text-red-600">{loginError}</p> }
+          </div>
             <label className="label">
               <span className="text-xl text-black label-text">Forget Password?</span>
             </label>
