@@ -12,7 +12,7 @@ const AppointmentBanner = ({selectedDate, setSelectedDate}) => {
           <img
             src={img}
             alt="mental therapy"
-            className="max-w-md rounded-lg shadow-2xl"
+            className="max-w-sm rounded-lg shadow-2xl"
           />
           <div className="mr-6 text-black ">
             <DayPicker

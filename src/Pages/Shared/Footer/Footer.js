@@ -15,8 +15,8 @@ const Footer = () => {
               Get Latest Updates Subscribe <br /> To Our Newsletter
             </h5>
             <form
-              class=" ml-20"
-              style={{ backgroundColor: "rgba(0, 0, 0, 0.03)", width: "700px" }}
+              className="ml-20 lg:w-2/3 md:w-2/3"
+              style={{ backgroundColor: "rgba(0, 0, 0, 0.03)",  }}
             >
               <div class="flex items-center border-b border-teal-500 py-2">
                 <input
@@ -35,7 +35,7 @@ const Footer = () => {
             </form>
           </div>
           <hr />
-          <div className="grid grid-cols-3 gap-4 my-8">
+          <div className="grid gap-4 my-8 sm:grid-cols-3 md:grid-cold-2 lg:grid-cold-3">
             <div>
               <h3 style={{ fontSize: "20px" }} className="mb-4 font-semibold">
                 About Us
