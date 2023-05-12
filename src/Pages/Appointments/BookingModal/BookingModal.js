@@ -1,10 +1,13 @@
 import { format } from "date-fns";
-import React from "react";
+import React, { useContext } from "react";
+import { AuthContext } from "../../../contexts/AuthProvider";
+import { toast } from "react-hot-toast";
 // import { toast } from 'react-hot-toast';
 
-const BookingModal = ({ treatment, setTreatment, selectedDate }) => {
+const BookingModal = ({ treatment, setTreatment, selectedDate, refetch }) => {
   const { name, slots } = treatment; //treatment is appointment option
   const date = format(selectedDate, "PP");
+  const {user} = useContext(AuthContext);
 
   const handleBooking = event => {
     event.preventDefault();
@@ -26,13 +29,30 @@ const BookingModal = ({ treatment, setTreatment, selectedDate }) => {
     // TODO: send data to the server
     // and once data is saved then close the modal
     // and display success toast
-    console.log(booking);
-    setTreatment(null)
+    fetch('http://localhost:5000/bookings', {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify(booking)
+    })
+    .then(res => res.json())
+    .then(data => {
+      console.log(data);
+      if(data.acknowledged){
+        setTreatment(null);
+        toast.success('Booking Confirmed.');
+        refetch();
+      }
+      else{
+        toast.error(data.message);
+      }
+    })
   }
 
   return (
     <>
-      <div className="text-black">
+      <div className="font-bold text-black">
         <input type="checkbox" id="booking-modal" className="modal-toggle" />
         <label htmlFor="booking-modal" className="cursor-pointer modal ">
           <label className="relative modal-box" htmlFor="">
@@ -41,7 +61,8 @@ const BookingModal = ({ treatment, setTreatment, selectedDate }) => {
               <input
                 type="text"
                 value={date}
-                className="w-full font-bold border input border-neutral"
+                className="w-full border input border-neutral"
+                readOnly
               />
               <select name="slot" className="w-full border select border-neutral" required>
                 {
@@ -51,6 +72,7 @@ const BookingModal = ({ treatment, setTreatment, selectedDate }) => {
               <input
                 type="text"
                 name="name"
+                defaultValue={user?.displayName}
                 placeholder="Your Name"
                 className="w-full border input border-neutral"
                 required
@@ -58,9 +80,11 @@ const BookingModal = ({ treatment, setTreatment, selectedDate }) => {
               <input
                 type="email"
                 name="email"
+                defaultValue={user?.email }
                 placeholder="Email Address"
                 className="w-full border input border-neutral"
                 required
+                readOnly
               />
               <input
                 type="text"

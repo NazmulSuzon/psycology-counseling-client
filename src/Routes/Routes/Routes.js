@@ -3,9 +3,11 @@ import Main from "../../Layout/Main";
 import Home from "../../Pages/Home/Home/Home";
 import Login from "../../Pages/Login/Login/Login";
 import SignUp from "../../Pages/Login/SignUp/SignUp";
-import Dashboard from "../../Pages/Dashboard/Dashboard/Dashboard";
+// import Dashboard from "../../Pages/Dashboard/Dashboard/Dashboard";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import Appointment from "../../Pages/Appointments/Appointment/Appointment";
+import DashboardLayout from "../../Layout/DashboardLayout";
+import MyAppointment from "../../Pages/Dashboard/MyAppointment/MyAppointment";
 
 
 const router = createBrowserRouter([
@@ -33,7 +35,13 @@ const router = createBrowserRouter([
     },
     {
         path: '/dashboard',
-        element: <PrivateRoute><Dashboard/></PrivateRoute>
+        element: <PrivateRoute><DashboardLayout/></PrivateRoute>,
+        children:[
+            {
+                path: '/dashboard',
+                element: <MyAppointment/>
+            }
+        ]
     }
 ])
 
