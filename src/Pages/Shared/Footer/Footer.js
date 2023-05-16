@@ -18,15 +18,15 @@ const Footer = () => {
               className="ml-20 lg:w-2/3 md:w-2/3"
               style={{ backgroundColor: "rgba(0, 0, 0, 0.03)",  }}
             >
-              <div class="flex items-center border-b border-teal-500 py-2">
+              <div className="flex items-center py-2 border-b border-teal-500">
                 <input
-                  class="appearance-none bg-transparent border-none w-full text-white mr-3 py-1 font-bold px-2 leading-tight focus:outline-none"
+                  className="w-full px-2 py-1 mr-3 font-bold leading-tight text-white bg-transparent border-none appearance-none focus:outline-none"
                   type="text"
                   placeholder="Your Email Adress"
                   aria-label="Your Email"
                 />
                 <button
-                  class="flex-shrink-0 bg-primary hover:bg-neutral font-bold text-sm  text-white px-5 py-3 rounded"
+                  className="flex-shrink-0 px-5 py-3 text-sm font-bold text-white rounded bg-primary hover:bg-neutral"
                   type="button"
                 >
                   SUBSCRIBE NOW!

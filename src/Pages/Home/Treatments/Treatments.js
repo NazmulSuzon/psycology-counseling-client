@@ -55,14 +55,14 @@ const Treatments = () => {
               <div className="mt-4">
               <ul className="arrow-sign">
                   <li>
-                    <a class="animated-arrow" href="https://google.com">
-                      <span class="the-arrow -left">
-                        <span class="shaft"></span>
+                    <a className="animated-arrow" href="https://google.com">
+                      <span className="the-arrow -left">
+                        <span className="shaft"></span>
                       </span>
-                      <span class="main">
-                        <span class="text">Read More</span>
-                        <span class="the-arrow -right">
-                          <span class="shaft"></span>
+                      <span className="main">
+                        <span className="text">Read More</span>
+                        <span className="the-arrow -right">
+                          <span className="shaft"></span>
                         </span>
                       </span>
                     </a>
@@ -79,14 +79,14 @@ const Treatments = () => {
               <div className="mt-4 ">
               <ul>
                   <li>
-                    <a class="animated-arrow" href="https://google.com">
-                      <span class="the-arrow -left">
-                        <span class="shaft"></span>
+                    <a className="animated-arrow" href="https://google.com">
+                      <span className="the-arrow -left">
+                        <span className="shaft"></span>
                       </span>
-                      <span class="main">
-                        <span class="text">Read More</span>
-                        <span class="the-arrow -right">
-                          <span class="shaft"></span>
+                      <span className="main">
+                        <span className="text">Read More</span>
+                        <span className="the-arrow -right">
+                          <span className="shaft"></span>
                         </span>
                       </span>
                     </a>
@@ -103,14 +103,14 @@ const Treatments = () => {
               <div className="mt-4 ">
               <ul>
                   <li>
-                    <a class="animated-arrow" href="https://google.com">
-                      <span class="the-arrow -left">
-                        <span class="shaft"></span>
+                    <a className="animated-arrow" href="https://google.com">
+                      <span className="the-arrow -left">
+                        <span className="shaft"></span>
                       </span>
-                      <span class="main">
-                        <span class="text">Read More</span>
-                        <span class="the-arrow -right">
-                          <span class="shaft"></span>
+                      <span className="main">
+                        <span className="text">Read More</span>
+                        <span className="the-arrow -right">
+                          <span className="shaft"></span>
                         </span>
                       </span>
                     </a>
@@ -127,14 +127,14 @@ const Treatments = () => {
               <div className="mt-4 ">
               <ul>
                   <li>
-                    <a class="animated-arrow" href="https://google.com">
-                      <span class="the-arrow -left">
-                        <span class="shaft"></span>
+                    <a className="animated-arrow" href="https://google.com">
+                      <span className="the-arrow -left">
+                        <span className="shaft"></span>
                       </span>
-                      <span class="main">
-                        <span class="text">Read More</span>
-                        <span class="the-arrow -right">
-                          <span class="shaft"></span>
+                      <span className="main">
+                        <span className="text">Read More</span>
+                        <span className="the-arrow -right">
+                          <span className="shaft"></span>
                         </span>
                       </span>
                     </a>
@@ -151,14 +151,14 @@ const Treatments = () => {
               <div className="mt-4 ">
               <ul>
                   <li>
-                    <a class="animated-arrow" href="https://google.com">
-                      <span class="the-arrow -left">
-                        <span class="shaft"></span>
+                    <a className="animated-arrow" href="https://google.com">
+                      <span className="the-arrow -left">
+                        <span className="shaft"></span>
                       </span>
-                      <span class="main">
-                        <span class="text">Read More</span>
-                        <span class="the-arrow -right">
-                          <span class="shaft"></span>
+                      <span className="main">
+                        <span className="text">Read More</span>
+                        <span className="the-arrow -right">
+                          <span className="shaft"></span>
                         </span>
                       </span>
                     </a>
@@ -175,14 +175,14 @@ const Treatments = () => {
               <div className="mt-4 ">
               <ul>
                   <li>
-                    <a class="animated-arrow" href="https://google.com">
-                      <span class="the-arrow -left">
-                        <span class="shaft"></span>
+                    <a className="animated-arrow" href="https://google.com">
+                      <span className="the-arrow -left">
+                        <span className="shaft"></span>
                       </span>
-                      <span class="main">
-                        <span class="text">Read More</span>
-                        <span class="the-arrow -right">
-                          <span class="shaft"></span>
+                      <span className="main">
+                        <span className="text">Read More</span>
+                        <span className="the-arrow -right">
+                          <span className="shaft"></span>
                         </span>
                       </span>
                     </a>

@@ -51,14 +51,14 @@ const ServiceCard = () => {
               <div className="px-5">
                 <ul>
                   <li>
-                    <a class="animated-arrow" href="https://google.com">
-                      <span class="the-arrow -left">
-                        <span class="shaft"></span>
+                    <a className="animated-arrow" href="https://google.com">
+                      <span className="the-arrow -left">
+                        <span className="shaft"></span>
                       </span>
-                      <span class="main">
-                        <span class="text">Explore More</span>
-                        <span class="the-arrow -right">
-                          <span class="shaft"></span>
+                      <span className="main">
+                        <span className="text">Explore More</span>
+                        <span className="the-arrow -right">
+                          <span className="shaft"></span>
                         </span>
                       </span>
                     </a>
