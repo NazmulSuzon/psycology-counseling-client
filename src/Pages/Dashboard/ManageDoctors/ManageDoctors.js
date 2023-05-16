@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useQuery } from "react-query";
 import Loading from "../../Shared/Loading/Loading";
 import ConfirmationModal from "../../Shared/ConfirmationModal/ConfirmationModal";
+import { toast } from "react-hot-toast";
 
 const ManageDoctors = () => {
     const [deletingDoctor, setDeletingDoctor] = useState(null);
@@ -10,18 +11,39 @@ const ManageDoctors = () => {
         setDeletingDoctor(null);
     }
 
-    const handleDeleteDoctor = doctor =>{
-        console.log(doctor);
-    }
+    const { data: doctors, isLoading, refetch } = useQuery({
+        queryKey: ['doctors'],
+        queryFn: async () => {
+            try {
+                const res = await fetch('http://localhost:5000/doctors', {
+                    headers: {
+                        authorization: `bearer ${localStorage.getItem('accessToken')}`
+                    }
+                });
+                const data = await res.json();
+                return data;
+            }
+            catch (error) {
 
-  const { data: doctors = [], isLoading } = useQuery({
-    queryKey: ["doctors"],
-    queryFn: async () => {
-      const res = await fetch("http://localhost:5000/doctors");
-      const data = await res.json();
-      return data;
-    },
-  });
+            }
+        }
+    });
+
+  const handleDeleteDoctor = doctor =>{
+    fetch(`http://localhost:5000/doctors/${doctor._id}`, {
+        method: 'DELETE',
+        headers: {
+            authorization: `bearer ${localStorage.getItem('accessToken')}`
+        }
+    })
+    .then(res => res.json())
+    .then(data => {
+        if(data.deletedCount > 0){
+            refetch();
+            toast.success(`Doctor ${doctor.name} deleted successfully.`)
+        }
+    })
+}
 
   if (isLoading) {
     return <Loading />;
