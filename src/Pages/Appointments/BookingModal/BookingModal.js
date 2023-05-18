@@ -5,7 +5,7 @@ import { toast } from "react-hot-toast";
 // import { toast } from 'react-hot-toast';
 
 const BookingModal = ({ treatment, setTreatment, selectedDate, refetch }) => {
-  const { name, slots } = treatment; //treatment is appointment option
+  const { name, slots, price } = treatment; //treatment is appointment option
   const date = format(selectedDate, "PP");
   const {user} = useContext(AuthContext);
 
@@ -23,7 +23,8 @@ const BookingModal = ({ treatment, setTreatment, selectedDate, refetch }) => {
       patient: names,
       slot,
       email,
-      phone
+      phone,
+      price
     }
 
     // TODO: send data to the server
