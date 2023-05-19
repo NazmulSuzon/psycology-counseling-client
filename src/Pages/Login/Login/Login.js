@@ -5,6 +5,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../../contexts/AuthProvider";
 import useToken from "../../../hooks/useToken";
+import Navbar from "../../Shared/Navbar/Navbar";
 
 const Login = () => {
   const { register, formState: { errors }, handleSubmit } = useForm();
@@ -39,7 +40,9 @@ const Login = () => {
   }
 
   return (
-    <div className="h-[800px] flex justify-center items-center loginBG">
+    <div>
+      <Navbar/>
+      <div className="h-[800px] flex justify-center items-center loginBG">
       <div className="p-8 shadow-2xl card glass w-96">
         <h2 className="text-4xl font-bold text-center text-primary">Please Login</h2>
         <form onSubmit={handleSubmit(handleLogin)}>
@@ -83,6 +86,7 @@ const Login = () => {
           <button className="w-full text-black border-secondary btn btn-outline">CONTINUE WITH GOOGLE</button>
         </form>
       </div>
+    </div>
     </div>
   );
 };

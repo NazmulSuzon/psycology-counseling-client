@@ -16,7 +16,7 @@ import img6 from "../../../images/carousel-card/love.png";
 const Treatments = () => {
   return (
     <div>
-      <div className="container grid grid-cols-2 gap-12 mt-16">
+      <div className="container grid grid-cols-2 gap-12 mx-auto mt-16">
         <div className="text-center">
           <p className="font-bold text-accent ">
             TYPES OF TREATMENTS AT ZENISTA
@@ -25,7 +25,7 @@ const Treatments = () => {
             Our psychology <span className="text-primary">Treatments</span>
           </h1>
         </div>
-        <div className="font-bold text-center place-items-center text-accent">
+        <div className="font-bold text-center text-accent">
           <p>
             Smile Pure always places patients at the center of our attention,
             and <br />
@@ -48,7 +48,7 @@ const Treatments = () => {
           modules={[Autoplay]}
         >
           <SwiperSlide className="mx-2 drop-shadow-md carousel-card">
-            <div className="bg-img">
+            <div>
               <img style={{ width: "55px" }} src={img1} alt="" />
               <h1 className="mt-4">Personality Disorders</h1>
               <p className="mt-4 font-bold text-accent">A personality disorder involves a lasting pattern of emotional unstable behavior that causes problems.</p>

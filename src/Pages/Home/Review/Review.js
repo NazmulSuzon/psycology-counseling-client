@@ -14,7 +14,7 @@ const Review = () => {
         <br /> over the globe!
       </h2>
       <div className="container mx-auto">
-        <Carousel cols={3} rows={1} gap={20} loop autoplay={1500}>
+        <Carousel cols={3} rows={1} gap={20} loop >
           <Carousel.Item>
             <div className="card card-compact bg-base-100">
               <div className="flex pt-8 pl-8 mb-4">
@@ -47,7 +47,7 @@ const Review = () => {
                     type="radio"
                     name="rating-6"
                     className="bg-primary mask mask-star-2"
-                    checked
+                    
                   />
                   <input
                     type="radio"
@@ -100,7 +100,7 @@ const Review = () => {
                     type="radio"
                     name="rating-6"
                     className="bg-primary mask mask-star-2"
-                    checked
+                    
                   />
                   <input
                     type="radio"
@@ -153,7 +153,6 @@ const Review = () => {
                     type="radio"
                     name="rating-6"
                     className="bg-primary mask mask-star-2"
-                    checked
                   />
                   <input
                     type="radio"
@@ -206,7 +205,7 @@ const Review = () => {
                     type="radio"
                     name="rating-6"
                     className="bg-primary mask mask-star-2"
-                    checked
+                    
                   />
                   <input
                     type="radio"
@@ -259,7 +258,7 @@ const Review = () => {
                     type="radio"
                     name="rating-6"
                     className="bg-primary mask mask-star-2"
-                    checked
+                    
                   />
                   <input
                     type="radio"
@@ -312,7 +311,7 @@ const Review = () => {
                     type="radio"
                     name="rating-6"
                     className="bg-primary mask mask-star-2"
-                    checked
+                    
                   />
                   <input
                     type="radio"

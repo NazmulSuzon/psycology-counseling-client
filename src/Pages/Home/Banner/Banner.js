@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 const Banner = () => {
   return (
     <div className="mx-12 banner" style={{height:'630px'}}>
-      <div className=" carousel max-w-[1500px] banner-image mx-auto pt-4">
+      <div className=" carousel max-w-[1700px] banner-image mx-auto pt-4">
         <div id="slide1" style={{height:'700px'}} className="relative w-full carousel-item">
           <img src={img1} alt="" className="w-full" />
           <div className="centered">
@@ -38,7 +38,7 @@ const Banner = () => {
             </a>
           </div>
         </div>
-        <div id="slide2" className="relative w-full carousel-item">
+        <div id="slide2" style={{height:'700px'}} className="relative w-full carousel-item">
           <img src={img2} alt="" className="w-full" />
           <div className="img2-text">
           <p className="btn border-0 text-white bg-[#B07AB4]">

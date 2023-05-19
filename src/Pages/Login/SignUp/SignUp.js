@@ -5,6 +5,7 @@ import './SignUp.css';
 import { AuthContext } from '../../../contexts/AuthProvider';
 import { toast } from 'react-hot-toast';
 import useToken from '../../../hooks/useToken';
+import Navbar from '../../Shared/Navbar/Navbar';
 
 const SignUp = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
@@ -59,7 +60,9 @@ const SignUp = () => {
 
 
     return (
-        <div className="h-[800px] flex justify-center items-center signupBG">
+       <div>
+        <Navbar/>
+         <div className="h-[800px] flex justify-center items-center signupBG">
       <div className="p-8 shadow-2xl card glass w-96">
         <h2 className="text-4xl font-bold text-primary">Please Sign Up</h2>
         <form onSubmit={handleSubmit(handleSignUp)}>
@@ -109,6 +112,7 @@ const SignUp = () => {
         </form>
       </div>
     </div>
+       </div>
     );
 };
 

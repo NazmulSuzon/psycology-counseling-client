@@ -29,8 +29,8 @@ const AllUsers = () => {
   }
 
   return (
-    <div>
-      <h3 className="my-6 text-3xl font-bold text-secondary">All Users</h3>
+    <div className="px-7">
+      <h3 className="my-6 text-4xl font-bold text-secondary">All Users</h3>
       <div className="overflow-x-auto">
         <table className="table w-full">
           <thead>
@@ -43,10 +43,10 @@ const AllUsers = () => {
             </tr>
           </thead>
 
-          <tbody>
+          <tbody className="font-bold text-black">
             {
                 users.map((user, i) => <tr key={user._id}>
-                <th>{i+1}</th>
+                <th>{i+1}.</th>
                 <td>{user.name}</td>
                 <td>{user.email}</td>
                 <td>{user?.role !== 'admin' && <button onClick={() => handleMakeAdmin(user._id)} className="text-white btn btn-primary btn-xs">Make Admin</button>}</td>

@@ -11,8 +11,8 @@ import { Link } from "react-router-dom";
 
 const News = () => {
   return (
-    <div className="mt-20 text-center">
-      <p>STEPS TOWARDS MENTAL FITNESS</p> <br />
+    <div name="blogs" className="mt-20 text-center">
+      <p className="font-bold text-black">STEPS TOWARDS MENTAL FITNESS</p> <br />
       <h2 style={{ fontSize: "39px" }} className="font-bold text-secondary">
         Our latest news & articles!
       </h2>
@@ -188,6 +188,47 @@ const News = () => {
                 <img
                   style={{ width: "326px", height: "274px" }}
                   src={img5}
+                  alt="car!"
+                />
+              </figure>
+              <div className="flex mt-4 text-neutral">
+                <p>
+                  {" "}
+                  <span>
+                    <FontAwesomeIcon icon={faTag} />
+                  </span>{" "}
+                  Phobias & Anxiety
+                </p>
+                <p className="ml-4">
+                  {" "}
+                  <span>
+                    <FontAwesomeIcon icon={faUser} />
+                  </span>{" "}
+                  John Doe
+                </p>
+              </div>
+              <Link
+                style={{ fontSize: "20px" }}
+                className="text-[#343c5c] my-4 font-bold"
+              >
+                Am I Depressed? 6 Signs You <br /> Should Know About
+              </Link>
+              <hr />
+              <Link
+                to="/blogs"
+                className="mt-4 text-white border-0 hover:border hover:border-primary bg-primary btn hover:bg-white hover:text-accent"
+              >
+                Read More{" "}
+                <FontAwesomeIcon className="ml-3" icon={faArrowRight} />
+              </Link>
+            </div>
+          </Carousel.Item>
+          <Carousel.Item>
+            <div className="p-8 border-2 shadow-xl card">
+              <figure>
+                <img
+                  style={{ width: "326px", height: "274px" }}
+                  src={img1}
                   alt="car!"
                 />
               </figure>

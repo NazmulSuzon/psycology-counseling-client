@@ -9,7 +9,9 @@ const Main = () => {
     return (
         <div>
             <MyInfo/>
+            <div className='px-12'>
             <Navbar/>
+            </div>
             <Outlet/>
             <Footer/>
         </div>

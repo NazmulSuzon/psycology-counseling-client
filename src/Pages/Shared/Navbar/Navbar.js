@@ -1,7 +1,9 @@
 import React, { useContext } from "react";
 import logo from "../../../images/logo.png";
-import { Link } from "react-router-dom";
+// import {  Link, } from "react-router-dom";
 import { AuthContext } from "../../../contexts/AuthProvider";
+import { Link } from "react-scroll";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const {user, logOut} = useContext(AuthContext);
@@ -15,69 +17,37 @@ const Navbar = () => {
   const menuItems = (
     <React.Fragment>
       <li>
-        <Link to="/">Home</Link>
+        <NavLink className="text-white hover:bg-primary" to="/">HOME</NavLink>
       </li>
       <li>
-        <Link to="/about">About</Link>
-      </li>
-      <li tabIndex={0}>
-        <Link>
-          Services
-          {/* <svg
-            className="fill-current"
-            xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-          >
-            <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
-          </svg> */}
-        </Link>
-        {/* <ul >
-          <li>
-            <Link to="/">Personality Disorders</Link>
-          </li>
-          <li>
-            <Link to="/">Troubling Emotions</Link>
-          </li>
-          <li>
-            <Link to="/">Individual Counselling</Link>
-          </li>
-          <li>
-            <Link to="/">Child Counselling</Link>
-          </li>
-          <li>
-            <Link to="/">Group Counselling</Link>
-          </li>
-          <li>
-            <Link to="/">Couple Counselling</Link>
-          </li>
-        </ul> */}
+        <NavLink to="/services" className="ml-2 hover:bg-primary">
+          SERVICES
+        </NavLink>
       </li>
       <li>
-        <Link to="/blog">Blog</Link>
+      <Link activeClass="active-class" spy={true} offset={-55} exact to="blogs" className="hover:bg-primary" smooth={true} duration={800}>BLOG</Link>
       </li>
       <li>
-        <Link to="/contact">Contact</Link>
+        <NavLink className="hover:bg-primary" to="/contact">CONTACT</NavLink>
       </li>
       { user?.uid ? 
       <>
         <li>
-        <Link to="/dashboard">Dashboard</Link>
+        <NavLink className="hover:bg-primary" to="/dashboard">DASHBOARD</NavLink>
       </li>
         <li>
-          <button onClick={handleLogOut}>Sign Out</button>
+          <button onClick={handleLogOut}>SIGN OUT</button>
         </li>
       </>
       :
       <li>
-        <Link to="/login">Log In</Link>
+        <NavLink className=" hover:bg-primary" to="/login">LOG IN</NavLink>
       </li>}
     </React.Fragment>
   );
 
   return (
-    <div className="px-12">
+    <div className="font-bold ">
       <div className="px-16 navbar bg-neutral">
       <div className=" navbar-start">
         <div className="dropdown">
@@ -104,18 +74,18 @@ const Navbar = () => {
             {menuItems}
           </ul>
         </div>
-        <Link to="/">
+        <NavLink to="/">
           <img src={logo} alt="" />
-        </Link>
+        </NavLink>
       </div>
       <div className="hidden text-white navbar-center lg:flex ">
         <ul className="px-1 menu menu-horizontal">{menuItems}</ul>
       </div>
       
       <div className="navbar-end">
-        <Link to="/appointment" className="text-white bg-[#5A5C82] border-white btn px-6">
+        <NavLink to="/appointment" className="text-white bg-[#5A5C82] border-white btn px-6">
           Appointment!
-        </Link>
+        </NavLink>
       </div>
       <label htmlFor="dashboard-drawer" tabIndex={1} className="btn btn-ghost lg:hidden">
             <svg

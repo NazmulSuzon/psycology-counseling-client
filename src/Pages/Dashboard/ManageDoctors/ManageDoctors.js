@@ -50,7 +50,7 @@ const ManageDoctors = () => {
   }
 
   return (
-    <div className="pl-7">
+    <div className="px-7">
       <h3 className="my-6 text-3xl font-bold text-secondary">
         Manage Doctors: {doctors.length}
       </h3>
@@ -70,7 +70,7 @@ const ManageDoctors = () => {
           <tbody className="font-bold text-black">
             {doctors.map((doctor, i) => (
               <tr key={doctor._id}>
-                <th>{i + 1}</th>
+                <th>{i + 1}.</th>
                 <td>
                   <div className="flex items-center space-x-3">
                     <div className="avatar">

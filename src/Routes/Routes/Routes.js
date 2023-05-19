@@ -14,6 +14,7 @@ import AddDoctors from "../../Pages/Dashboard/AddDoctors/AddDoctors";
 import ManageDoctors from "../../Pages/Dashboard/ManageDoctors/ManageDoctors";
 import Payment from "../../Pages/Dashboard/Payment/Payment";
 import DisplayError from "../../Pages/Shared/DisplayError/DisplayError";
+import ServiceLayout from "../../Services/ServiceLayout/ServiceLayout";
 
 
 const router = createBrowserRouter([
@@ -26,19 +27,23 @@ const router = createBrowserRouter([
                 path: '/',
                 element: <Home/>
             },
-            {
-                path: '/login',
-                element: <Login/>
-            },
-            {
-                path: '/signup',
-                element: <SignUp/>
-            },
-            {
-                path: '/appointment',
-                element: <Appointment/>
-            },
         ]
+    },
+    {
+        path: '/login',
+        element: <Login/>
+    },
+    {
+        path: '/signup',
+        element: <SignUp/>
+    },
+    {
+        path: '/appointment',
+        element: <Appointment/>
+    },
+    {
+        path: '/services',
+        element: <ServiceLayout/>
     },
     {
         path:'/dashboard',
